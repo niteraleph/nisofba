@@ -69,6 +69,7 @@ void createBackupFile()
 	FILE *file_to_write;
 	file_to_write = fopen(destination_path, "w+");
 	fwrite(buffer_file, sizeof(char),source_size, file_to_write);
+	fclose(destination_path);
 }
 
 void addToList()
@@ -77,6 +78,7 @@ void addToList()
 	backup_list = fopen("./backup_list", "app");
 	fwrite(source_path, sizeof(char), sizeof(source_path)-1, backup_list);
 	fputc('\n', backup_list);
+	fclose("./backup_list");
 }
 
 int compare_char_arr(char array1[], char array2[], int length)
