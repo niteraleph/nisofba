@@ -7,7 +7,7 @@ where, operation is the action taken by the user, source is the file/directory w
 OPERATIONS:
 set-default-destination [destination] --> sets the default destination
 
-add [source] optional[--list=<listID>] optional[destination] --> adds the file/directory under source to the default backup list, unless list is specified. If destination is specified, the destination will change from the standard one and set for now on to this.
+add [source] optional[--list=<listID>] optional[destination] --> adds the file/directory under source to the default backup list, unless list is specified. If destination is specified, the destination will change from the standard one and set for now on to this (currently no d option works)
 
 backup optional[source] optional[--list=<listID>] optional[-r] --> backs up all files/directories in the default backup list, unless list is specified. "-r" option replaces the files, even if they have not been modified since last backup.
 
